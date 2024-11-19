@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="main.css" rel="stylesheet">
+    <title>Atividade Javascript</title>
+</head>
+<body>  
+    <h1>ATIVIDADES DE JAVASCRIPT</h1>  
+    <p>Cada botão vai executar uma função usando o prompt ou console</p>
+    <div><input class="btn" type="button" value="Bem Vindo" onclick="bemvindo()"></div>
+    <div><input class="btn" type="button" value="Soma" onclick="soma()"></div>
+    <div><input class="btn" type="button" value="Calculo de idade" onclick="idade()"></div>
+    <div><input class="btn" type="button" value="Valor de sorvetes" onclick="sorvetes()"></div>
+    <div><input class="btn" type="button" value="Adivinhação" onclick="adivinhar()"></div>
+    <div><input class="btn" type="button" value="Exibição" onclick="exibir()"></div>
+    <div><input class="btn" type="button" value="Restaurante" onclick="restaurante()"></div>
+    <div><input class="btn" type="button" value="Multiplicação no console" onclick="multiplicar()"></div>
+    <div><input class="btn" type="button" value="Previsão" onclick="previsao()"></div>
+    <div><input class="btn" type="button" value="Exibir Nota" onclick="exibirNota()"></div>
+
+    <h2>DESAFIO DE COMPRAS</h2>
+    <p>Esse desafio pendura cada item com seu subtotal na tabela abaixo</p>
+    <div><Label>Nome do produto: </Label> <input type="text" id="nomeProduto" placeholder="Digite o produto"></div>
+    <div><Label>Digita a quantidade: </Label> <input type="number" min="1" id="qtdProduto" placeholder="Digite a quantidade de produto"></div>
+    <div><Label>Valor unitário: </Label> <input type="number" id="valorUnitario" step="any" placeholder="Digite o valor unitário"></div>
+    <input class="btn" type="button" value="Adicionar produto" onclick="adicionarProduto()">
+    <table>
+        <thead>
+            <tr>
+                <td>Produto</td>
+                <td>Quantidade</td>
+                <td>Valor</td>
+                <td>Subtotal</td>
+            </tr>
+        </thead>
+        <tbody id="tblBody">            
+        </tbody>
+    </table>
+
+    <h2>DESAFIO CALCULADORA SIMPLES</h2>
+    <input class="btn" type="button" value="Cálculo de média" onclick="calcularMedia()">
+</body>
+<script src="main.js" ></script>
+</html>

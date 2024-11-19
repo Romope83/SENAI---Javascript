@@ -1,0 +1,32 @@
+h1{
+    text-align: center;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+}
+
+input{
+   border: 1px solid blue;
+
+}
+
+span{
+    font-weight: 700;
+    color: red;
+}
+
+.btn{
+    background-color: blueviolet;
+    border-radius: 5px;
+    border-color: white;
+    color: white;
+    padding: 0.4rem 1rem;
+    margin-bottom: 0.5rem;
+}
+.btn:hover{
+    background-color: rgb(164, 98, 226);
+}

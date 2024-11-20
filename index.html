@@ -6,41 +6,70 @@
     <link href="main.css" rel="stylesheet">
     <title>Atividade Javascript</title>
 </head>
-<body>  
-    <h1>ATIVIDADES DE JAVASCRIPT</h1>  
-    <p>Cada botão vai executar uma função usando o prompt ou console</p>
-    <div><input class="btn" type="button" value="Bem Vindo" onclick="bemvindo()"></div>
-    <div><input class="btn" type="button" value="Soma" onclick="soma()"></div>
-    <div><input class="btn" type="button" value="Calculo de idade" onclick="idade()"></div>
-    <div><input class="btn" type="button" value="Valor de sorvetes" onclick="sorvetes()"></div>
-    <div><input class="btn" type="button" value="Adivinhação" onclick="adivinhar()"></div>
-    <div><input class="btn" type="button" value="Exibição" onclick="exibir()"></div>
-    <div><input class="btn" type="button" value="Restaurante" onclick="restaurante()"></div>
-    <div><input class="btn" type="button" value="Multiplicação no console" onclick="multiplicar()"></div>
-    <div><input class="btn" type="button" value="Previsão" onclick="previsao()"></div>
-    <div><input class="btn" type="button" value="Exibir Nota" onclick="exibirNota()"></div>
+<body>
+    <header class="header">
+        <img class="logo" src="/img/senai-logo.jpg" alt="Logo SENAI">
+        <nav class="main-nav">
+            <a class="nav-item" href="#atividades">Atividades Iniciais</a>
+            <a class="nav-item" href="#ifelse">IF e ELSE</a>
+        </nav>
+    </header>
+    <section id="atividades">
 
-    <h2>DESAFIO DE COMPRAS</h2>
-    <p>Esse desafio pendura cada item com seu subtotal na tabela abaixo</p>
-    <div><Label>Nome do produto: </Label> <input type="text" id="nomeProduto" placeholder="Digite o produto"></div>
-    <div><Label>Digita a quantidade: </Label> <input type="number" min="1" id="qtdProduto" placeholder="Digite a quantidade de produto"></div>
-    <div><Label>Valor unitário: </Label> <input type="number" id="valorUnitario" step="any" placeholder="Digite o valor unitário"></div>
-    <input class="btn" type="button" value="Adicionar produto" onclick="adicionarProduto()">
-    <table>
-        <thead>
-            <tr>
-                <td>Produto</td>
-                <td>Quantidade</td>
-                <td>Valor</td>
-                <td>Subtotal</td>
-            </tr>
-        </thead>
-        <tbody id="tblBody">            
-        </tbody>
-    </table>
+        <h1>ATIVIDADES DE JAVASCRIPT</h1>  
+        <p>Cada botão vai executar uma função usando o prompt ou console</p>
+        <div><input class="btn" type="button" value="Bem Vindo" onclick="bemvindo()"></div>
+        <div><input class="btn" type="button" value="Soma" onclick="soma()"></div>
+        <div><input class="btn" type="button" value="Calculo de idade" onclick="idade()"></div>
+        <div><input class="btn" type="button" value="Valor de sorvetes" onclick="sorvetes()"></div>
+        <div><input class="btn" type="button" value="Adivinhação" onclick="adivinhar()"></div>
+        <div><input class="btn" type="button" value="Exibição" onclick="exibir()"></div>
+        <div><input class="btn" type="button" value="Restaurante" onclick="restaurante()"></div>
+        <div><input class="btn" type="button" value="Multiplicação no console" onclick="multiplicar()"></div>
+        <div><input class="btn" type="button" value="Previsão" onclick="previsao()"></div>
+        <div><input class="btn" type="button" value="Exibir Nota" onclick="exibirNota()"></div>
+        
+        <h2>DESAFIO DE COMPRAS</h2>
+        <p>Esse desafio pendura cada item com seu subtotal na tabela abaixo</p>
+        <div class="u-flex-center"><Label class="input-label">Nome do produto: </Label> <input type="text" id="nomeProduto" placeholder="Digite o produto"></div>
+        <div class="u-flex-center"><Label class="input-label">Digita a quantidade: </Label> <input type="number" min="1" id="qtdProduto" placeholder="Digite a quantidade de produto"></div>
+        <div class="u-flex-center"><Label class="input-label">Valor unitário: </Label> <input type="number" id="valorUnitario" step="any" placeholder="Digite o valor unitário"></div>
+        <input class="btn" type="button" value="Adicionar produto" onclick="adicionarProduto()">
+        <table>
+            <thead>
+                <tr>
+                    <td>Produto</td>
+                    <td>Quantidade</td>
+                    <td>Valor</td>
+                    <td>Subtotal</td>
+                </tr>
+            </thead>
+            <tbody id="tblBody">            
+            </tbody>
+        </table>
+        
+        <h2>DESAFIO CALCULADORA SIMPLES</h2>
+        <input class="btn" type="button" value="Cálculo de média" onclick="calcularMedia()">
+    </section>  
 
-    <h2>DESAFIO CALCULADORA SIMPLES</h2>
-    <input class="btn" type="button" value="Cálculo de média" onclick="calcularMedia()">
+<section id="ifelse">
+    <h1>JAVASCRIPT - IF ELSE</h1>
+
+    <div><input class="btn" type="button" value="Verificação de números positivos" onclick="verificacaoMultipla()"></div>
+    <div><input class="btn" type="button" value="Calculadora" onclick="calculadoraSimples()"></div>
+    <div><input class="btn" type="button" value="Número no intervalo" onclick="intervalo()"></div>
+    <div><input class="btn" type="button" value="Desconto em compras" onclick="desconto()"></div>
+    <div><input class="btn" type="button" value="Classificação por altura" onclick="classificacao()"></div>
+    <div><input class="btn" type="button" value="Verificação senha" onclick="senha()"></div>
+    <div><input class="btn" type="button" value="Par ou impar com extra" onclick="parImpar()"></div>
+    <div><input class="btn" type="button" value="Classificação etária" onclick="etaria()"></div>
+    <div><input class="btn" type="button" value="Jogo adivinhação" onclick="adivinhacaoGame()"></div>
+    <div><input class="btn" type="button" value="Avaliação desempenho" onclick="avaliacaoDesempenho()"></div>
+    
+    <h2>Desafio final - Avaliação de Candidatos</h2>
+    <div><input class="btn" type="button" value="Avaliação de Candidatos" onclick="avaliacaoCandidato()"></div>
+
+</section>
 </body>
 <script src="main.js" ></script>
 </html>

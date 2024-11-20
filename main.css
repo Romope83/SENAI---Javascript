@@ -1,5 +1,22 @@
+/*RESETS*/
+*,
+*::after
+*::before{
+    margin: 0;
+    padding: 0;
+}
+
+.u-flex-center{
+    display: flex;
+}
+
+.input-label{
+    width:10rem;
+}
+
 h1{
     text-align: center;
+    color: red;
 }
 .form{
     display: flex;
@@ -10,7 +27,9 @@ h1{
 }
 
 input{
-   border: 1px solid blue;
+   border: 1px solid blueviolet;
+   border-radius: 5px;
+   padding: 0.5rem 1rem ;
 
 }
 
@@ -29,4 +48,63 @@ span{
 }
 .btn:hover{
     background-color: rgb(164, 98, 226);
+}
+
+table {
+    background-color: azure;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+thead{
+    background-color: orangered;
+    color: white;
+}
+thead tr {
+    padding: 0.2rem 0.5rem;
+}
+tbody tr {
+    background-color: rgb(133, 45, 233);
+    color: white;
+    text-align: center;
+    padding: 0.2rem 0.5rem;
+}
+
+h2{
+    color: blueviolet;
+    margin: 3rem 0;
+}
+
+/**************/
+  /* HEADER*/
+/**************/
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    background-color: rgb(195, 159, 228);
+    height: 5rem;
+    align-items: center;
+}
+
+.main-nav{
+    display: flex;
+    gap: 1rem;
+    color: black;
+    font-size: 1rem;
+}
+.nav-item{
+    text-decoration: none;
+    display: inline-block;
+    background-color: orangered;
+    padding: 0.3rem 0.7rem;
+    border-radius: 5px;
+    color: white;
+}
+.nav-item:hover{
+    background-color: rgb(250, 125, 79);
+    transition: all 0.2s;
+}
+
+.logo{
+    width: 8rem;
 }

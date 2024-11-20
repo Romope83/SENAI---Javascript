@@ -102,3 +102,156 @@ function calcularMedia()
     alert(`Para a disciplina ${disciplina}, a sua média é ${mediaSimples}`);
 
 }
+
+//IF E ELSE
+
+function verificacaoMultipla()
+{
+    let numero01 = Number(prompt('Informe o primeiro número'));
+    let numero02 = Number(prompt('Informe o segundo número'));
+    let numero03 = Number(prompt('Informe o terceiro número'));
+
+    if(numero01 > 0 && numero02 > 0 && numero03 > 0)
+        alert('Os números são todos positivos!');
+    else
+        alert('Tem número negativo no meio');
+}
+
+function calculadoraSimples()
+{
+    let numero01 = Number(prompt('Informe o primeiro número'));
+    let numero02 = Number(prompt('Informe o segundo número'));
+    let operacao = prompt('Informe uma operação matemática(soma, subtração, multiplicação ou divisão)');
+    let operacoes = "soma subtração multiplicação divisão";
+    if(!operacoes.includes(operacao))
+        alert('Operação inválida!');
+    else{
+        if(operacao ==="soma")
+            alert(`O resultado da soma é ${numero01 + numero02}`);
+        else if(operacao === "subtração")
+            alert(`O resultado da subtração é ${numero01 - numero02}`);
+        else if(operacao === "multiplicação")
+            alert(`O resultado da multiplicação é ${numero01 * numero02}`);   
+        else if(operacao === "divisão")
+            if(numero02 === 0)
+                alert('Não existe divisão por zero!');
+            else
+                alert(`O resultado da divisão é ${numero01 /  numero02}`);               
+    }
+}
+
+function intervalo(){
+    let numero = Number(prompt('Informe um número'));
+    if(numero>= 50 && numero <=100)
+        alert('O número está no intervalo');
+    else
+        alert('O número não está no intervalo');
+}
+
+function desconto()
+{
+    let valorTotal = Number(prompt('Informe o valor total da compra'));
+    if(valorTotal > 100)
+        alert(`Valor com desconto ${valorTotal - (valorTotal * 10/100)  }`);
+    else
+        alert(`Valor sem desconto ${valorTotal}`);
+}
+
+function classificacao(){
+    let altura = Number(prompt('Informe a sua altura em centimetros'));
+    if(altura < 150)
+        alert('Você tem altura baixa');
+    else if(altura >= 150 && altura <=180)
+        alert('Você tem altura média');
+    else
+        alert('Você tem altura alta');
+}
+
+function senha(){
+    let senhaCorreta = '1234';
+    let senhaDigitada = prompt('Digita sua senha');
+    if(senhaCorreta == senhaDigitada)
+        alert('Acesso permitido!')
+    else
+        alert('Acesso negado!')
+
+}
+
+function parImpar()
+{
+    let numero = Number(prompt('Digite um número'));
+    if(numero % 2 !==0){
+        if(numero > 50)
+            alert(`O número ${numero} é impar e ESPECIAL!`);
+        else
+            alert(`O número ${numero} é impar`);
+    }
+    else
+        alert(`O número ${numero} é par!`);
+
+
+}
+
+function etaria(){
+    let idade = Number(prompt('Informe sua idade'));
+    if(idade <=12)
+        alert('Você é uma criança');
+    else if(idade > 12 && idade <=17)
+        alert('Você é um adolescente');
+    else if(idade > 17 && idade <=64)
+        alert('Você é um adulto');
+    else
+        alert('Você é um idoso');
+}
+
+function adivinhacaoGame(){
+    let numeroSecreto = Math.ceil(Math.random() * 10 + 1) ;
+    console.log(numeroSecreto);
+    let numero = Number(prompt('Digite um valor entre 1 e 10'));
+    if(numero === numeroSecreto)
+        alert('Parabéns, você acertou!');
+    else
+        alert(`Tente novamente, o número secreto era ${numeroSecreto}`);
+}
+
+function avaliacaoDesempenho(){
+    let nota = Number(prompt('Informe sua nota(0-10)'));
+    if(nota < 0 || nota > 10)
+        alert('Nota inválida!');
+    else if(nota <=4)
+        alert('Nota RUIM!');
+    else if(nota > 4 && nota < 8 )
+        alert('Nota BOA!');
+    else
+        alert('Nota EXCELENTE!');
+        
+}
+
+function avaliacaoCandidato(){
+let nome = prompt('Informe seu nome');
+let idade = Number(prompt('Informe sua idade'));
+let provaTecnica = Number(prompt('Informe sua pontuação na prova técninca(0-10)'));
+let entrevista = Number(prompt('Informe sua pontuação na entrevista(0-10)'));
+let resposta = "";
+
+if(provaTecnica < 0 || provaTecnica > 10 || entrevista < 0 || entrevista > 10){
+    alert('Nota da prova ou entrevista inválida');
+    return;
+}
+if(idade<18)
+    resposta += 'você não atende aos critérios de idade.';
+if(provaTecnica<7)
+    resposta += 'sua pontuação na Prova Técnica foi insuficiente.';
+if(entrevista<6)
+    resposta += 'sua pontuação na Entrevista foi insuficiente.';
+
+if(resposta =="")
+    alert(`Parabéns, ${nome}! Você foi aprovado para a vaga`);
+else
+{
+    let retorno = `Desculpe, ${nome}: ${resposta}`;
+    alert(retorno);
+
+}
+}
+    

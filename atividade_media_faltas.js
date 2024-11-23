@@ -20,4 +20,6 @@ function definirStatus(nota01,nota02,nota03,porcFaltas){
         return "de Recuperação!";
     if(notaMedia < 5 || porcFaltas>=25)
         return "Reprovado";
+
+    return " --- Dados inválidos";
 }

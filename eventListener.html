@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento javascript</title>
+    <style>
+         .hide{
+            display:none;
+        } 
+        .show{
+            display:block;
+        }
+        .showHide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div><input type="button" id="iptButton" value="Se achegue!"></div>
+    <div><label class="showHide" id="myLabel">Minha Mensagem</label></div>
+</body>
+<script>
+    let btn = document.getElementById("iptButton");
+    btn.addEventListener('mouseenter',function(){
+        let label = document.getElementById('myLabel');
+        
+        //OPÇÃO 01
+        label.classList.toggle('showHide');
+
+        // OPÇÃO 02
+        //label.classList.replace('hide','show');
+        
+        //OPÇÃO 03
+        //label.classList.add('show');
+        // label.classList.remove('hide');
+
+    });
+    btn.addEventListener('mouseout',function(){
+        let label = document.getElementById('myLabel');
+
+        //OPÇÃO 01
+        label.classList.toggle('showHide');
+
+        //OPÇÃO 02
+        //label.classList.replace('show','hide');
+
+        //OPÇÃO 03
+        // label.classList.add('hide');
+        // label.classList.remove('show');
+    });
+</script>
+</html>

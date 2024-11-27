@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            border: 1px solid grey;
+            border-radius: 5px;
+            line-height: 1.5rem;
+            padding: 0.2rem 1rem;
+            margin-bottom: 3rem;
+        }
+        .input{
+           color: blue;
+           font-size: 1.3rem;  
+        } 
+        .input:focus{
+            outline: 2px solid red;
+            border: 1px solid transparent;
+
+        }
+        .btn {
+            color: white;
+            font-size: 1.3rem;
+            background-color: blueviolet;             
+        }
+        .btn:hover {
+            color: white;
+            font-size: 1.3rem;
+            background-color: rgb(111, 54, 165);             
+        }
+
+        .confirmacao{
+            font-size: 1.3rem;
+
+        }
+
+    </style>
+</head>
+<body>
+    <h2 id="mensagem">Clique no botão para mudar esta mensagem!</h2>
+
+    <input id="novoTexto" class="input" type="text" placeholder="Digite o novo texto aqui!">
+    <div>
+
+           <input class="btn" type="button" id="mudar" value="Mudar Texto">
+           <input class="btn" type="button" id="resetar" value="Resetar">
+           <div>
+                <label class="confirmacao" id="confirmacao"></label>
+           </div>
+
+    </div>
+</body>
+<script>
+
+    let mensagem = document.getElementById('mensagem');
+    let mudar = document.getElementById('mudar');
+    let novoTexto = document.getElementById('novoTexto');
+    let confirmacao = document.getElementById('confirmacao');
+
+    mudar.addEventListener('click',function(){
+        if(novoTexto.value=="")
+            {
+                confirmacao.innerText = 'O campo não pode ser em branco';
+                confirmacao.style.color = 'red';
+                return;
+            }
+        confirmacao.innerText = 'Atualizado com sucesso';
+        confirmacao.style.color = 'green';
+        mensagem.innerText = novoTexto.value;
+
+    });
+
+    resetar.addEventListener('click', function(){
+        mensagem.innerText = 'Clique no botão para mudar esta mensagem!';
+        confirmacao.innerText = '';
+        novoTexto.value = '';
+    });    
+
+
+</script>
+</html>
